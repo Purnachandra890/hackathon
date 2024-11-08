@@ -8,10 +8,12 @@
   </head>
   <body>
     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="container">
         <a href="#" class="logo">Women’s Protection</a>
-        <ul class="nav-links">
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+        <ul class="nav-links" id="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -42,7 +44,7 @@
         </video>
 
         <!-- video carousal -->
-         <h1>Distress Audio</h1>
+        <h1>Distress Audio</h1>
         <div class="video-carousel-container">
           <div class="video-carousel">
             <video controls class="carousel-video">
@@ -53,11 +55,17 @@
               Your browser does not support the video tag.
             </video>
             <video controls class="carousel-video">
-              <source src="https://res.cloudinary.com/dz6ueggth/video/upload/v1731088663/owsqb0quusxwke76ecx2.mp4" type="video/mp4" />
+              <source
+                src="https://res.cloudinary.com/dz6ueggth/video/upload/v1731088663/owsqb0quusxwke76ecx2.mp4"
+                type="video/mp4"
+              />
               Your browser does not support the video tag.
             </video>
             <video controls class="carousel-video">
-              <source src="https://res.cloudinary.com/dz6ueggth/video/upload/v1731088706/bre9mze9dqxwrjlz1ggh.mp4" type="video/mp4" />
+              <source
+                src="https://res.cloudinary.com/dz6ueggth/video/upload/v1731088706/bre9mze9dqxwrjlz1ggh.mp4"
+                type="video/mp4"
+              />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -67,7 +75,10 @@
 
         <h1>ChatBot</h1>
         <video controls class="video-screen-recording">
-          <source src="https://res.cloudinary.com/dz6ueggth/video/upload/v1731089029/tr88ckqyysxouhrufbny.mp4" type="video/mp4" />
+          <source
+            src="https://res.cloudinary.com/dz6ueggth/video/upload/v1731089029/tr88ckqyysxouhrufbny.mp4"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
 
@@ -224,6 +235,10 @@
           (currentVideo + direction + videos.length) % videos.length;
         updateVideoCarousel();
       }
+      function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("show");
+    }
     </script>
   </body>
 </html>
